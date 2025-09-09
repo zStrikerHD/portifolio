@@ -1,0 +1,26 @@
+.hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-top: 150px;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        
+        &__title {
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        &__text {
+            letter-spacing: 2px;
+        }
+    }
+
+    &__img {
+        max-width: 350px;
+        border-radius: 7%;
+    }
+}

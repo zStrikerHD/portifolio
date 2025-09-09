@@ -1,0 +1,48 @@
+.title {
+    &__text {
+    text-align: center;
+    margin-top: 60px;
+    padding: 20px;
+    }
+}
+
+.conhecimentos {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 5.6vw;
+    min-height: 80vh;
+    column-gap: 40px;
+    
+    &__card {
+        background-color: #003366;
+        padding: 10px;
+        width: 100%;
+        border-radius: 5%;
+        border: 1px solid #fff;
+
+        &:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 
+                0 0 40px rgba(0,102,204,0.8),
+                0 20px 40px rgba(0,0,0,0.4),
+                inset 0 1px 0 rgba(255,255,255,0.2);
+            text-shadow: 0 0 20px rgba(255,255,255,0.8);
+            cursor: pointer;
+        }
+        
+        p {
+            text-align: center;
+            width: 100%; 
+            overflow-wrap: break-word;
+        }
+
+        img {
+            max-width: 200px;
+            width: 100%;
+        }
+    }
+}
+

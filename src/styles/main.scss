@@ -1,0 +1,89 @@
+@use 'hero';
+@use 'conhecimentos';
+@use 'button';
+@use 'footer';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    list-style: none;
+    color: aliceblue;
+}
+
+body {
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+            background: #000;
+        }
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    place-items: center; 
+}
+
+.wave-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, 
+        #000000 0%,
+        #001122 30%, 
+        #003366 60%,
+        #0066cc 100%);
+    background-size: 100% 200%;
+    animation: waveMove 8s ease-in-out infinite;
+    z-index: -1;
+}
+
+/* Animação da onda */
+@keyframes waveMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at bottom, 
+                rgba(0,102,204,0.3) 0%, 
+                transparent 70%);
+            animation: pulse 6s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 30px 15px;
+            }
+            
+            .header {
+                padding: 60px 0;
+            }
+        }
