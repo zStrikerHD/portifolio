@@ -1,3 +1,5 @@
+@use 'variaveis';
+
 .button-container {
     display: flex;
     justify-content: center;
@@ -11,8 +13,8 @@
             padding: 25px 57px;
             font-size: 1.3rem;
             font-weight: bold;
-            color: #ffffff;
-            background: linear-gradient(45deg, #000000, #003366, #0066cc, #000000);
+            color: variaveis.$white;
+            background: linear-gradient(45deg, variaveis.$black, variaveis.$blue1, variaveis.$blue2, variaveis.$black);
             background-size: 300% 300%;
             border: none;
             border-radius: 50px;
@@ -35,7 +37,7 @@
                 right: -2px;
                 bottom: -2px;
                 background: linear-gradient(45deg, 
-                    #0066cc, #003366, #66ccff, #0066cc, #003366);
+                    variaveis.$blue2,variaveis.$blue1,variaveis.$blue3, variaveis.$blue2, variaveis.$blue1);
                 background-size: 400% 400%;
                 border-radius: 50px;
                 z-index: -1;
@@ -77,10 +79,10 @@
             position: absolute;
             width: 6px;
             height: 6px;
-            background: #66ccff;
+            background: variaveis.$blue3;
             border-radius: 50%;
             animation: float 3s infinite ease-in-out;
-            box-shadow: 0 0 10px #66ccff;
+            box-shadow: 0 0 10px variaveis.$blue3;
         }
 
         @keyframes gradientShift {

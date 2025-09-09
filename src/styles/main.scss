@@ -2,22 +2,23 @@
 @use 'conhecimentos';
 @use 'button';
 @use 'footer';
+@use 'variaveis';
 
 * {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
     list-style: none;
-    color: aliceblue;
+    color: variaveis.$white;
 }
 
 body {
-            min-height: 100vh;
-            font-family: 'Arial', sans-serif;
-            overflow-x: hidden;
-            background: #000;
-        }
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    background: variaveis.$black;
+}
 
 .container {
     max-width: 960px;
@@ -33,10 +34,10 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg, 
-        #000000 0%,
-        #001122 30%, 
-        #003366 60%,
-        #0066cc 100%);
+        variaveis.$black 0%,
+        variaveis.$dark_blue 30%, 
+        variaveis.$blue1 60%,
+        variaveis.$blue2 100%);
     background-size: 100% 200%;
     animation: waveMove 8s ease-in-out infinite;
     z-index: -1;

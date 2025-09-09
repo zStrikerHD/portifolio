@@ -1,3 +1,5 @@
+@use 'variaveis';
+
 .title {
     &__text {
     text-align: center;
@@ -17,11 +19,11 @@
     column-gap: 40px;
     
     &__card {
-        background-color: #003366;
+        background-color: variaveis.$blue1;
         padding: 10px;
         width: 100%;
         border-radius: 5%;
-        border: 1px solid #fff;
+        border: 1px solid variaveis.$white;
 
         &:hover {
             transform: translateY(-3px) scale(1.05);
@@ -43,6 +45,10 @@
             max-width: 200px;
             width: 100%;
         }
+    }
+
+    @media screen and (max-width: 740px) {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 

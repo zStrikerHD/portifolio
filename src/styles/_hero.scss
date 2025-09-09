@@ -23,4 +23,27 @@
         max-width: 350px;
         border-radius: 7%;
     }
+
+    @media screen and (max-width: 740px) {
+        display: block;
+        align-items: center;
+        text-align: center;
+
+        &__text {
+            &__title {
+                margin-bottom: 30px;
+                font-size: 25px;
+            }
+
+            &__text {
+                font-size: 13px;
+                margin-bottom: 30px;
+            }
+        }
+
+        &__img {
+            max-width: 300px;
+        }
+
+    }
 }
